@@ -15,7 +15,7 @@ fastify.get("/search", async (request, reply) => {
             query = "",
             tags = "",
             subject = "",
-            examboard = "",
+            examBoard = "",
             level = "",
             type = "",
             limit = 20,
@@ -44,9 +44,9 @@ fastify.get("/search", async (request, reply) => {
             filters.push(`"subject" = $${paramIndex++}`);
             values.push(subject);
         }
-        if (examboard) {
+        if (examBoard) {
             filters.push(`"examboard" = $${paramIndex++}`);
-            values.push(examboard);
+            values.push(examBoard);
         }
         if (level) {
             filters.push(`"level" = $${paramIndex++}`);
